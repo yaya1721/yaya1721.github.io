@@ -2,5 +2,11 @@ h1{
   background-color:skyblue;
   text-align: center;
   font-weight: 600;
-  color: #FFFFBB
+  color: white;
+  font-family:segoe print; 
+}
+body {
+    background-image: url("https://pbs.twimg.com/profile_images/631800387016626176/P5jbtPH5.png");
+    background-repeat:repeat;
+    opacity: 0.5;
 }
