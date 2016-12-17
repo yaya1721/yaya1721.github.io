@@ -5,8 +5,11 @@ h1{
   color: white;
   font-family:segoe print; 
 }
-.story {
+div.story {
     background-image: url("https://pbs.twimg.com/profile_images/631800387016626176/P5jbtPH5.png");
     background-repeat:repeat;
     opacity: 0.3;
+}
+div.notransbox{
+    width="250"
 }
