@@ -2,10 +2,10 @@ h1{
   background-color:	#7700FF;
   text-align: center;
   font-weight: 600;
-  color: 	#7700FF;
+  color: white;
   font-family:segoe print; 
 }
-body {
+div {
     background-image: url("https://pbs.twimg.com/profile_images/631800387016626176/P5jbtPH5.png");
     background-repeat:repeat;
     opacity: 0.3;
