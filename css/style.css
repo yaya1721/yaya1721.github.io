@@ -10,4 +10,23 @@ h1{
     background-repeat: repeat;
     opacity: 0.3;
 }
+<!-- 標準按鈕 -->
+<button type="button" class="btn btn-default">Default</button>
 
+<!-- 提供額外視覺上的重量和識別一組按鈕中主要的操作項目 -->
+<button type="button" class="btn btn-primary">Primary</button>
+
+<!-- 指出成功或積極的操作 -->
+<button type="button" class="btn btn-success">Success</button>
+
+<!-- 訊息提示方面的操作 -->
+<button type="button" class="btn btn-info">Info</button>
+
+<!-- 指出應謹慎採取此一行動 -->
+<button type="button" class="btn btn-warning">Warning</button>
+
+<!-- 指出危險或潛在負面作用的行動 -->
+<button type="button" class="btn btn-danger">Danger</button>
+
+<!-- 淡化一個按鈕，使它看起來像是一個連結並同時保持按鈕行為 -->
+<button type="button" class="btn btn-link">Link</button>
