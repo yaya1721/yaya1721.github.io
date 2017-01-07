@@ -8,9 +8,8 @@ h1{
   color: white;
   font-family:segoe print; 
 }
-preface{
-  font-family:segoe print; 
-  font-weight: 400;
+#preface{
+  font-weight: 300;
   color: black;
 
 }
