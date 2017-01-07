@@ -4,18 +4,18 @@ body{
 h1{
   background-color:	#556B2F;
   text-align: center;
-  font-weight: 600;
+  font-weight: 550;
   color: white;
   font-family:segoe print; 
 }
 preface{
   font-family:segoe print; 
-  font-weight: 300;
+  font-weight: 400;
   color: black;
 
 }
 body {
-    padding-top: 60px;
+    padding-top: 55px;
     background-color:#CCFF99;
 }
 
