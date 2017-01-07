@@ -1,3 +1,6 @@
+body{
+  font-family:segoe print; 
+}
 h1{
   background-color:	#7700FF;
   text-align: center;
@@ -13,11 +16,7 @@ preface{
 }
 body {
     padding-top: 70px;
-}
-.div.story {
-    background-image: url("https://pbs.twimg.com/profile_images/631800387016626176/P5jbtPH5.png");
-    background-repeat: repeat;
-    opacity: 0.3;
+    background-color:#FFCCCC;
 }
 
 
