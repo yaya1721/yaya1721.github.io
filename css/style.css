@@ -1,5 +1,8 @@
 body{
   font-family:segoe print; 
+  padding-top: 55px;
+  background-color:#CCFF99;
+}
 }
 h1{
   background-color:	#556B2F;
@@ -9,13 +12,11 @@ h1{
   font-family:segoe print; 
 }
 #preface{
-  font-weight: 300;
+   padding-top: 55px;
+   font-size:17px;
   color: black;
+}
 
-}
-body {
-    padding-top: 55px;
-    background-color:#CCFF99;
-}
+   
 
 
