@@ -17,24 +17,29 @@
     <div class="navbar-header">
       <a class="navbar-brand" data-toggle="modal" data-target="#myModal" href="#">超級抹茶地圖</a>
      
-     <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="gridSystemModalLabel">Matcha Map</h4>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
       <div class="modal-body">
-       <p>敬請期待!!!!!!</p>
-       <img src="/images/matcha.jpg"> 
+        ...
       </div>
       <div class="modal-footer">
-       <button type="button" class="btn btn-primary">Print</button> 
-       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+    </div>
+  </div>
+</div>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
