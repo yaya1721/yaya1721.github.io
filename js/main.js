@@ -12,4 +12,4 @@ function addTask(){
     alert("You must write something!");
   }
 }
-$("#in").on("click", addTask);
+$("button#in").on("click", addTask);
