@@ -7,7 +7,7 @@ function addTask(){
   
   
     $("#ipt").val("");
-    updateNum();
+  
   }else{
     alert("You must write something!");
   }
