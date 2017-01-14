@@ -4,7 +4,7 @@ function addTask(){
   console.log("hi");
   if (value!==""){
      $("#info").append(" <span class=\"content\">"
-                         +"Hello"+value+"</span>")
+                         +"Hello "+value+"</span><br>")
   
  
     $("#ipt").val("");
