@@ -1,4 +1,4 @@
-$(selector).val();
+
 function addTask(){
   var value = $("#ipt").val();
   if (value!==""){
