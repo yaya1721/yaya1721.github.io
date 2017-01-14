@@ -5,7 +5,7 @@ function addTask(){
      $("#info").append(" <li><label><span class=\"content\">"
                          +"Hello"+value+"</span></li>")
   
-  
+  console.log("hi");
     $("#ipt").val("");
   
   }else{
