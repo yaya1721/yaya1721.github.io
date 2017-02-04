@@ -169,7 +169,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td>"+cookiesCollection.find()[i].name+"</td><td>"+cookiesCollection.find()[i].price+"</td>"
+   var cookiesdata ="<tr><td>"+cookiesCollection.find()[i].name+"</td><td>"+cookiesCollection.find()[i].price100g+"</td>"
   $("tbody").append(cookiesdata);
   }
   }
