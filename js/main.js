@@ -3,10 +3,7 @@ function addTask(){
   var value = $("#ipt").val();
   
   if (value!==""){
-     $("#info").append(" <span class=\"content\">"
-                         +"Hello "+value+"</span><br>")
-  
- 
+     $("#info").append("<span>"+"Hello"+value+"</span><br>")
     $("#ipt").val("");
   
   }else{
