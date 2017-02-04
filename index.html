@@ -61,18 +61,13 @@
       <p>現在人生最重要的事~讀書、長笛and吃遍天下抹茶!!</p>
       <p>會考完的夢想：學德文、日本自助行</p>
       
-    <table class="table table-hover">
-    <thead>
+<table>
+        <thead>
             <tr>
                 <td>好吃的</td>
-              
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>海鮮煎餅</td>
-                <td>巧克力蔓越莓餅乾</td>
-            </tr>
         </tbody>
     </table>
         
@@ -157,11 +152,23 @@
  
  <script>
   var fdb= new ForerunnerDB();
-  var db= fdb.db("handmade cookies");
+  var db= fdb.db("cookies");
   var cookiesCollection = db.collection("cookies");
   cookiesCollection.load();
   
-  
+  function additem(){
+   
+ 
+   
+   
+  }
+   
+  function showitem(){
+  $("tbody").show();
+   for(var i=0: i<cookiesCollection.find().length; i++){ 
+   var cookiesdata ="<tr><td>"+cookiesCollection.find()[i].name+"</td><td>"+cookiesCollection.find()[i].price+"</td>"
+  $(tbody).append(cookiesdata);
+  }
   </script>
         
  
