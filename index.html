@@ -167,8 +167,8 @@
    
   function showitem(){
   $("tbody").text(""); //清空tbody
-   $("cookiesTable").show();
-   for(var i=0: i<cookiesCollection.find().length; i++){ 
+  $("cookiesTable").show();
+  for(var i=0;i<cookiesCollection.find().length; i++){ 
    var cookiesdata ="<tr><td>"+cookiesCollection.find()[i].name+"</td><td>"+cookiesCollection.find()[i].price+"</td>"
   $(tbody).append(cookiesdata);
   }
