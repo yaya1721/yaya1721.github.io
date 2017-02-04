@@ -60,16 +60,18 @@
       <p>忙碌的國三生+吃貨</p>
       <p>現在人生最重要的事~讀書、長笛and吃遍天下抹茶!!</p>
       <p>會考完的夢想：學德文、日本自助行</p>
-      
-<table>
+<div>
+<button id="menu">好吃的</button>     
+<table id=cookiesTable>
         <thead>
             <tr>
-                <td>好吃的</td>
+                <td>餅乾🍪</td>
             </tr>
         </thead>
         <tbody>
         </tbody>
     </table>
+</div>
         
       <a href ="https://yaya1721.github.io/JS-final-project-template-ByNiya/"target="_blank" >人生製作的第一個遊戲</a><i class="material-icons">videogame_asset</i>
       <p>Your opinion</p>
@@ -164,11 +166,13 @@
   }
    
   function showitem(){
-  $("tbody").show();
+  $("tbody").text(""); //清空tbody
+   $("cookiesTable").show();
    for(var i=0: i<cookiesCollection.find().length; i++){ 
    var cookiesdata ="<tr><td>"+cookiesCollection.find()[i].name+"</td><td>"+cookiesCollection.find()[i].price+"</td>"
   $(tbody).append(cookiesdata);
   }
+   $("#menu").on("click",showitem);
   </script>
         
  
