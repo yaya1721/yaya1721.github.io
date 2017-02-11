@@ -191,17 +191,21 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><button type="button" class="btn btn-primary btn-xs" id="challenge[i]">"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
+   var cookiesdata ="<tr><td><button type="button" class="btn btn-primary btn-xs" id="challenge">"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
   $("tbody").append(cookiesdata);
   }
   }
- <!-- Button trigger modal -->
+ 
+  <!-- Button trigger modal -->
+  for(var i=0;i<cookiesCollection.find().length; i++){
   $(document).ready(function(){
     $("#challenge").click(function(){
         $("#myModal2").modal();
+     $("#test").text(cookiesCollection.find()[i].優惠方案);
     });
 });
-
+  }
+ 
   
   function search(){
    var query={
@@ -210,14 +214,7 @@
    result = db.collection("cookies").find(query);
    }
   
-  $(document).ready(function(){
-   for(var i=0;i<cookiesCollection.find().length; i++){
-    $("#challenge[i]").click(function(){
-         $("#test").text(cookiesCollection.find()[i].優惠方案);
-    
-    }
-    });
-});
+ 
   </script>
         
  
