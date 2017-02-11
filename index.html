@@ -62,7 +62,7 @@
       <p>會考完的夢想：學德文、日本自助行</p>
 <div>
 <input id="search">
-<input type="button" class="btn btn-info btn-md" onclick="search()" data-toggle="modal" data-target="#myModal"value="搜尋"> 
+<input type="button" class="btn btn-info btn-md" onclick="search()" data-toggle="modal" data-target="#myModal2"value="搜尋"> 
  
 <button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>     
 <table class="table table-hover" id=cookiesTable >
@@ -203,7 +203,7 @@
         $("#myModal2").modal();
     var id=$(this).text();
     var query={
-     _id: id
+     name: name
     };
      $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));   
   }
@@ -222,6 +222,37 @@
    }
   
  
+  
+  function addTask(){
+  var value = $("#ipt").val();
+  
+  if (value!==""){
+     $("#info").append("<span>"+"Hello "+value+"</span><br>")
+    $("#ipt").val("");
+  
+  }else{
+    alert("You must write something!");
+  }
+}
+$("button#in").on("click", addTask);
+
+
+function isEnterPressed(event){
+  //alert(event.which);
+  if(event.which==13){
+   addTask();  
+  }
+}
+$("#ipt").on("keypress", isEnterPressed);
+
+
+
+
+
+  
+  
+  
+  
   </script>
         
  
