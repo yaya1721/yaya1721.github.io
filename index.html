@@ -80,14 +80,15 @@
       
    <p>新增餅乾!!!!!</p>   
       <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-9">
     <div class="input-group">
       <input type="text" class="form-control" id="nameIpt" placeholder="name...">
       <span class="input-group-btn">
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
-  <div class="col-lg-6">
+  <br>
+     <div class="col-lg-6">
     <div class="input-group">
       <input type="text" class="form-control" id="priceIpt" placeholder="price/100g...">
       <span class="input-group-btn">
@@ -244,10 +245,11 @@
    var query={
     name: $("input#search").val()
    };
+   if($("input#search").val()!==""){
    result = db.collection("cookies").find(query);
    $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));   
    }
-  
+  }
  
   
   function addTask(){
