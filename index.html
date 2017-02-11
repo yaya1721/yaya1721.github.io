@@ -195,14 +195,18 @@
   $("tbody").append(cookiesdata);
   }
   }
- 
+  
+  
+  
   <!-- Button trigger modal -->
-  for(var i=0;i<cookiesCollection.find().length; i++){
-  $(document).ready(function(){
-    $("table").on("click","button#challenge",function(){
+  function challengeModal(){
         $("#myModal2").modal();
      $("#test").text(cookiesCollection.find()[i].name);
     });
+ 
+  for(var i=0;i<cookiesCollection.find().length; i++){
+  $(document).ready(function(){
+    $("table").on("click","button#challenge",challengeModal)
 });
   }
  
