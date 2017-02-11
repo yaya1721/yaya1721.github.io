@@ -68,7 +68,7 @@
 <table class="table table-hover" id=cookiesTable >
         <thead>
             <tr>
-                <td>餅乾🍪</td>
+                <td>餅乾🍪</td> <td>價格/100g</td>
             </tr>
         </thead>
         <tbody>
@@ -153,21 +153,18 @@
 </div>
  
  
- <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal2">
-  Launch demo modal
-</button>
+ 
 
-<!-- Modal -->
+<!-- Modal2 -->
 <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel2">小挑戰</h4>
+        <h4 class="modal-title" id="myModalLabel2">優惠方案</h4>
       </div>
       <div class="modal-body">
-        ...
+        <p id="test"></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -194,11 +191,18 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td>"+cookiesCollection.find()[i].name+"</td><td>"+cookiesCollection.find()[i].price100g+"</td>"
+   var cookiesdata ="<tr><td><button type="button" class="btn btn-primary btn-xs" id="challenge[i]">"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
   $("tbody").append(cookiesdata);
   }
   }
- 
+ <!-- Button trigger modal -->
+  $(document).ready(function(){
+    $("#challenge").click(function(){
+        $("#myModal2").modal();
+    });
+});
+
+  
   function search(){
    var query={
     name: $("input#search").val()
@@ -206,8 +210,14 @@
    result = db.collection("cookies").find(query);
    }
   
-  
-
+  $(document).ready(function(){
+   for(var i=0;i<cookiesCollection.find().length; i++){
+    $("#challenge[i]").click(function(){
+         $("#test").text(cookiesCollection.find()[i].優惠方案);
+    
+    }
+    });
+});
   </script>
         
  
