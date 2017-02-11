@@ -61,7 +61,7 @@
       <p>現在人生最重要的事~讀書、長笛and吃遍天下抹茶!!</p>
       <p>會考完的夢想：學德文、日本自助行</p>
 <div>
-<input id="search">
+<input id="search" placeholder="Search for...">
 <input type="button" class="btn btn-info btn-md" onclick="search()" data-toggle="modal" data-target="#myModal2"value="搜尋"> 
  
 <button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>     
@@ -201,7 +201,7 @@
   <!-- Button trigger modal -->
   function challengeModal(){
         $("#myModal2").modal();
-    var id=$(this).text();
+    var name=$(this).text();
     var query={
      name: name
     };
@@ -219,6 +219,7 @@
     name: $("input#search").val()
    };
    result = db.collection("cookies").find(query);
+   $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));   
    }
   
  
