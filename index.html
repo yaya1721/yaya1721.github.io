@@ -191,7 +191,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><button class="challenge">"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
+   var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
   $("tbody").append(cookiesdata);
   }
   }
@@ -199,7 +199,7 @@
   <!-- Button trigger modal -->
   for(var i=0;i<cookiesCollection.find().length; i++){
   $(document).ready(function(){
-    $(".challenge").click(function(){
+    $('#challenge').click(function(){
         $("#myModal2").modal();
      $("#test").text(cookiesCollection.find()[i].優惠方案);
     });
