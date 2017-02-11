@@ -84,7 +84,6 @@
     <div class="input-group">
       <input type="text" class="form-control" id="nameIpt" placeholder="name...">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="nameEnter">enter</button>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
@@ -92,7 +91,7 @@
     <div class="input-group">
       <input type="text" class="form-control" id="priceIpt" placeholder="price/100g...">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="priceEnter">enter</button>
+        <button class="btn btn-default" type="button" id="tableEnter">enter</button>
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
@@ -275,29 +274,36 @@ $("#ipt").on("keypress", isEnterPressed);
 
 
 
-function addTask(){
-  var value = $("#ipt").val();
-  
-  if (value!==""){
-     $("#info").append("<span>"+"Hello "+value+"</span><br>")
-    $("#ipt").val("");
-  
+function addTable(){
+  var nameValue = $("#nameIpt").val();
+  var nameValue = $("#priceIpt").val();
+  if (nameValue!==""&&priceValue!==""){
+    var newcookies={
+    name:  $("#nameIpt").val(),
+    price100g: $("#priceIpt").val()
+};
+   cookiesCollection.insert(newcookies);
+   showitem();
+    $("#nameIpt").val("");
+    $("#priceIpt").val("");
+   
   }else{
     alert("You must write something!");
   }
 }
-$("button#in").on("click", addTask);
+$("button#tableEnter").on("click", addTable);
 
-
-function isEnterPressed(event){
+  function isEnterPressed2(event){
   //alert(event.which);
   if(event.which==13){
-   addTask();  
+   addTable();  
   }
 }
-$("#ipt").on("keypress", isEnterPressed);
+$("#nameIpt").on("keypress", isEnterPressed2);
 
-  
+
+
+
   
   
   
