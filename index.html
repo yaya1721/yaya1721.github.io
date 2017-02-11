@@ -250,7 +250,7 @@
    $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));   
    }
   }
- 
+ $("#searchModal").on("click",search);
   
   function addTask(){
   var value = $("#ipt").val();
