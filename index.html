@@ -77,6 +77,33 @@
 </div>
         
       <a href ="https://yaya1721.github.io/JS-final-project-template-ByNiya/"target="_blank" >人生製作的第一個遊戲</a><i class="material-icons">videogame_asset</i>
+      
+   <p>新增餅乾!!!!!</p>   
+      <div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" id="nameIpt" placeholder="name...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="nameEnter">enter</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" id="priceIpt" placeholder="price/100g...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="priceEnter">enter</button>
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+      
+      
+      
+      
+      
+      
+   
       <p>Your opinion</p>
       <div class="input">
        <input id="ipt" type="text"/>
@@ -248,7 +275,27 @@ $("#ipt").on("keypress", isEnterPressed);
 
 
 
+function addTask(){
+  var value = $("#ipt").val();
+  
+  if (value!==""){
+     $("#info").append("<span>"+"Hello "+value+"</span><br>")
+    $("#ipt").val("");
+  
+  }else{
+    alert("You must write something!");
+  }
+}
+$("button#in").on("click", addTask);
 
+
+function isEnterPressed(event){
+  //alert(event.which);
+  if(event.which==13){
+   addTask();  
+  }
+}
+$("#ipt").on("keypress", isEnterPressed);
 
   
   
