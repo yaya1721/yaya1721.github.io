@@ -246,6 +246,7 @@
    };
    if($("input#search").val()!==""){
    $("#myModal2").modal();
+   console.log("jkl");
    result = db.collection("cookies").find(query);
    $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));   
    }
