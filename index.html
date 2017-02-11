@@ -201,9 +201,11 @@
   <!-- Button trigger modal -->
   function challengeModal(){
         $("#myModal2").modal();
-    for(var i=0;i<cookiesCollection.find().length; i++){
-     $("#test").text(cookiesCollection.find()[i].name);
-    }
+    var id=$(this).text();
+    var query={
+     _id: id
+    };
+     $("#test").text(JSON.stringify(cookiesCollection.find(query)[0].name));   
   }
 
  
