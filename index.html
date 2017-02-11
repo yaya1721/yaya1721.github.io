@@ -191,7 +191,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><button type="button" class="btn btn-primary btn-xs" id="challenge">"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
+   var cookiesdata ="<tr><td><button id="challenge">"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
   $("tbody").append(cookiesdata);
   }
   }
