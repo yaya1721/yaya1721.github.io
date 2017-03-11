@@ -218,7 +218,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td>"
+   var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"<button onclick="deleteTable()">"刪除"</button></td>"
   $("tbody").append(cookiesdata);
   }
   }
@@ -288,6 +288,8 @@ function addTable(){
    showitem();
     $("#nameIpt").val("");
     $("#priceIpt").val("");
+  
+   cookiesCollection.save();
    
   }else{
     alert("You must write something!");
@@ -303,6 +305,13 @@ $("button#tableEnter").on("click", addTable);
 }
 $(".form-control").on("keypress", isEnterPressed2);
 
+function deleteTask(){
+ confirm("Are you sure?");
+ var r = confirm("Are you sure?");
+if (r == true) {
+    
+} 
+}
 
 
 
