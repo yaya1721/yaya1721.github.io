@@ -285,11 +285,12 @@ function addTable(){
     price100g: $("#priceIpt").val()
 };
    cookiesCollection.insert(newcookies);
+   cookiesCollection.save();
    showitem();
     $("#nameIpt").val("");
     $("#priceIpt").val("");
   
-   cookiesCollection.save();
+   
    
   }else{
     alert("You must write something!");
