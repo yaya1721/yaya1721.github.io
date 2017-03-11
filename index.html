@@ -307,10 +307,10 @@ $(".form-control").on("keypress", isEnterPressed2);
 
 function deleteTable(){
  var r = confirm("Are you sure?");
- var id = $(this).closest("tr")[0].firstChild.innerText;//lastChild
+ var id = $(this).closest("tr")[0].firstChild.innerText;
 if (r == true){
  cookiesCollection.remove({
-    _id: id
+    name: id
 });
 cookiesCollection.save();
 showitem(); 
