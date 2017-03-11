@@ -218,7 +218,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"<button id='deleteButton'>刪除</button></td>"
+   var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+" <button class='deleteButton'>刪除</button></td>"
   $("tbody").append(cookiesdata);
   }
   }
@@ -309,10 +309,17 @@ function deleteTable(){
  confirm("Are you sure?");
  var r = confirm("Are you sure?");
 if (r == true) {
- $(this).closest("tr").remove(); 
+var name=$(this);
+    var query={
+     name: name
+    };
+ cookiesCollection.remove({
+    _id: cookiesCollection.find(query)
+});
+showitem(); 
 } 
 }
-$("button#deleteButton").on("click",deleteTable);
+$("#tbody").on("click",".deleteButton", deleteTable);
 
 
   
