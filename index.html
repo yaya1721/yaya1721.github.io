@@ -309,12 +309,12 @@ function deleteTable(){
  confirm("Are you sure?");
  var r = confirm("Are you sure?");
 if (r == true) {
-var name=$(this);
+var name=$(this).text();
     var query={
      name: name
     };
  cookiesCollection.remove({
-    _id: cookiesCollection.find(query)
+    cookiesCollection.find(query)
 });
 showitem(); 
 } 
