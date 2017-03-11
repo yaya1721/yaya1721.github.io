@@ -306,15 +306,11 @@ $("button#tableEnter").on("click", addTable);
 $(".form-control").on("keypress", isEnterPressed2);
 
 function deleteTable(){
- confirm("Are you sure?");
  var r = confirm("Are you sure?");
+ var id= $(this).data();
 if (r == true) {
-var name=$(this).text();
-    var query={
-     name: name
-    };
  cookiesCollection.remove({
-    cookiesCollection.find(query)
+    _id: id
 });
 showitem(); 
 } 
