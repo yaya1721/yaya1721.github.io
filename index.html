@@ -386,14 +386,15 @@ $("tbody").on("click",".editButton", editModal);
   
 function editTable(){
   var r = confirm("Are you sure?");
-
  if (r == true){
+  var nameValue = $("#nameIpt").val();
+  var priceValue = $("#priceIpt").val();
   if (nameValue!==""&& priceValue!==""){
     var newData={
     name:  $("#nameEdit").val(),
     price100g: $("#priceEdit").val()
 };  
-   DB.collection("cookies").updateById(editDataId,newData);
+  cookiesCollection.updateById(editDataId,newData);
   }
   }
  showitem();
