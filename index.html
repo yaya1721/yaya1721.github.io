@@ -379,7 +379,7 @@ function editModal(){
     var query={
      name: name
     };
-     $("#nameEdit").text(cookiesCollection.find(query)[0]);   
+     $("#nameEdit").val(cookiesCollection.find(query)[0]);   
   
   }
 $("tbody").on("click",".editButton", editModal);
