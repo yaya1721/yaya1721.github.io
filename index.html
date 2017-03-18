@@ -237,7 +237,7 @@
       </div>
       <div class="modal-footer">
       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      <button type="button" class="btn btn-primary">Save changes</button>
+      <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
       </div>
     </div>
   </div>
@@ -370,11 +370,24 @@ $("tbody").on("click",".deleteButton", deleteTable);
 
 function editModal(){
   $("#myModal3").modal();
-
   }
 $("tbody").on("click",".editButton", editModal);
   
-  
+function editTable(){
+  var r = confirm("Are you sure?");
+  var id = $(this).closest("tr")[0].firstChild.innerText;
+ if (r == true){
+  var nameValue = $("#nameEdit").val();
+  var priceValue = $("#priceEdit").val();
+  if (nameValue!==""&& priceValue!==""){
+    var newData={
+    name:  $("#nameEdit").val(),
+    price100g: $("#priceEdit").val()
+};  
+   DB.collection("cookies").updateById(id,newData);
+  }
+  }
+}
   
   </script>
         
