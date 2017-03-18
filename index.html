@@ -263,9 +263,7 @@
   var cookiesCollection = db.collection("cookies");
   cookiesCollection.load();
   
-  function additem(){
-  
-  }
+ 
    
   function showitem(){
   $("tbody").text(""); //清空tbody
@@ -379,8 +377,8 @@ function editModal(){
     var query={
      name: name
     };
-     $("#nameEdit").val(cookiesCollection.find(query)[0]);   
-  
+     $("#nameEdit").val(cookiesCollection.find(query)[0].name);   
+     $("#priceEdit").val(cookiesCollection.find(query)[0].price100g);   
   }
 $("tbody").on("click",".editButton", editModal);
   
