@@ -361,6 +361,8 @@ $(".form-control").on("keypress", isEnterPressed2);
 function deleteTable(){
  var r = confirm("Are you sure?");
  var id = $(this).closest("tr")[0].firstChild.innerText;
+  //var id=$(this).data("id");
+    var query={
 if (r == true){
  cookiesCollection.remove({
     name: id
@@ -373,7 +375,8 @@ $("tbody").on("click",".deleteButton", deleteTable);
 
 function editModal(){
   $("#myModal3").modal();
-  var name=$(this).closest("tr")[0].firstChild.innerText;
+  var name= $(this).closest("tr")[0].firstChild.innerText;
+ //$(this).data("id"); id為亂碼
     var query={
      name: name
     };
@@ -386,8 +389,6 @@ function editTable(){
   var r = confirm("Are you sure?");
   var id = $(this).closest("tr")[0].firstChild.innerText;
  if (r == true){
-  var nameValue = $("#nameEdit").val();
-  var priceValue = $("#priceEdit").val();
   if (nameValue!==""&& priceValue!==""){
     var newData={
     name:  $("#nameEdit").val(),
