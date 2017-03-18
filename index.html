@@ -362,7 +362,6 @@ function deleteTable(){
  var r = confirm("Are you sure?");
  var id = $(this).closest("tr")[0].firstChild.innerText;
   //var id=$(this).data("id");
-    var query={
 if (r == true){
  cookiesCollection.remove({
     name: id
