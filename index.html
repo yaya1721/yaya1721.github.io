@@ -267,7 +267,7 @@
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
    var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
-       "<button class='editButton'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
+       "&nbsp;&nbsp;<button class='editButton'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
   $("tbody").append(cookiesdata);
   }
   }
@@ -372,7 +372,7 @@ function editModal(){
   $("#myModal3").modal();
 
   }
-
+$("tbody").on("click",".editButton", editModal);
   
   
   
