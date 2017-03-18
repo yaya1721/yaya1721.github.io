@@ -397,6 +397,7 @@ function editTable(){
   cookiesCollection.updateById(editDataId,newData);
   }
   }
+ cookiesCollection.save();
  showitem();
 }
   $("tbody").on("click","button#saveChanges", editTable);
