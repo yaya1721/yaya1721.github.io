@@ -371,7 +371,7 @@ $("tbody").on("click",".deleteButton", deleteTable);
 
 function editModal(){
   $("#myModal3").modal();
-  var editDataId= $(this).closest("tr")[0].firstChild.innerText;
+  editDataId= $(this).closest("tr")[0].firstChild.innerText;
  //$(this).data("id"); id為亂碼
     var query={
      name: editDataId
@@ -391,11 +391,12 @@ function editTable(){
     name:  $("#nameEdit").val(),
     price100g: $("#priceEdit").val()
 };  
-  cookiesCollection.updateById(editDataId,newData);
+  db.collection("cookies").updateById(editDataId,newData);
+  cookiesCollection.save();
+  showitem();
   }
   }
- cookiesCollection.save();
- showitem();
+
 }
   $("tbody").on("click","button#saveChanges", editTable);
   
