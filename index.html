@@ -223,12 +223,15 @@
       <span class="input-group-btn">
       </span>
     </div><!-- /input-group -->
-  </div><!-- /.col-lg-6 -->
+  </div><!-- /.col-lg-9 -->
   <br>
      <div class="col-lg-9">
     <div class="input-group">
       <input type="text" class="form-control" id="priceEdit" placeholder="price/100g...">
 
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-9 -->
+</div><!-- /.row -->
        
        
        
@@ -388,6 +391,7 @@ function editTable(){
   }
   }
 }
+  $("tbody").on("click","#priceEdit", editTable);
   
   </script>
         
