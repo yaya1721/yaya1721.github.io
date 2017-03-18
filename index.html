@@ -214,20 +214,22 @@
       </div>
       <div class="modal-body">
        
-       
+     
        
        <div class="row">
   <div class="col-lg-9">
-    <div class="input-group">
-      <input type="text" class="form-control" id="nameEdit" placeholder="name...">
+     <p>name</p>
+   <div class="input-group">
+     <input type="text" class="form-control" id="nameEdit">
       <span class="input-group-btn">
       </span>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-9 -->
   <br>
-     <div class="col-lg-9">
-    <div class="input-group">
-      <input type="text" class="form-control" id="priceEdit" placeholder="price/100g...">
+    <div class="col-lg-9">
+     <p>price/100g</p>
+     <div class="input-group">
+      <input type="text" class="form-control" id="priceEdit">
 
     </div><!-- /input-group -->
   </div><!-- /.col-lg-9 -->
@@ -373,6 +375,14 @@ $("tbody").on("click",".deleteButton", deleteTable);
 
 function editModal(){
   $("#myModal3").modal();
+  var name=$(this).closest("tr")[0].firstChild.innerText;
+    var query={
+     name: name
+    };
+     $("#nameEdit").text(cookiesCollection.find(query)[0]);   
+  }
+
+  
   }
 $("tbody").on("click",".editButton", editModal);
   
