@@ -63,7 +63,8 @@
 <div>
 <input id="search" placeholder="Search for...">
 <input type="button" class="btn btn-info btn-md" id="searchModal" value="搜尋"> 
- <input id="priceSearch" placeholder="price here...">
+ <input id="priceSearchMini" type="number" placeholder="價格下限...">
+ <input id="priceSearchMaxi" type="number" placeholder="價格上限...">
  <input type="button" class="btn btn-info btn-md" id="searchModal2" value="搜尋">
  
 <button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>     
@@ -410,16 +411,25 @@ function editTable(){
   
 function searchPrice(){
    
-var priceExpand= $("input#priceSearch").val() 
+var miniSelector= $("input#priceSearchMini").val() 
+var maxiSelector= $("input#priceSearchMaxi").val() 
+
+if($("input#priceSearchMini").val()==""){
 var result= cookiesCollection.find({
     price100g: {
-        "$gt": priceExpand/1
+        "$gt": maxiSelector/1   
     }
-});
-   if($("input#priceSearch").val()!==""){
+})} else{
+   var result= cookiesCollection.find({
+    price100g: {
+        "$gt": maxiSelector/1 
+        "$lt": miniSelector/1
+    }   
+ });
    $("#myModal2").modal();
-   
-   $("#test").text(result[0].name);   
+   for(var i=0;i<result.length; i++){
+   $("#test").text(result[i].name);   
+   }
    }
   }
  $("#searchModal2").on("click",searchPrice);
