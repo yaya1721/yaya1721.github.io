@@ -411,15 +411,15 @@ function editTable(){
 function searchPrice(){
    
 var priceExpand= $("input#priceSearch").val() 
- cookiesCollection.find({
+var result= cookiesCollection.find({
     price: {
         "$gt": priceExpand
     }
 });
    if($("input#priceSearch").val()!==""){
    $("#myModal2").modal();
-   result = db.collection("cookies").find[0].name;
-   $("#test").text(result);   
+   
+   $("#test").text(result[0].name);   
    }
   }
  $("#searchModal2").on("click",searchPrice);
