@@ -62,8 +62,8 @@
       <p>會考完的夢想：學德文、日本自助行</p>
 <div>
 <input id="search" placeholder="Search for...">
-<input type="button" class="btn btn-info btn-md" id="searchModal" value="搜尋"> 
- <input id="priceSearchMini" type="number" placeholder="價格下限...">
+<input type="button" class="btn btn-info btn-md" id="searchModal" value="搜尋"><br> 
+ <input id="priceSearchMini" type="number" placeholder="價格下限..."> &nbsp;&nbsp; 
  <input id="priceSearchMaxi" type="number" placeholder="價格上限...">
  <input type="button" class="btn btn-info btn-md" id="searchModal2" value="搜尋">
  
@@ -422,7 +422,7 @@ var result= cookiesCollection.find({
 })} else{
    var result= cookiesCollection.find({
     price100g: {
-        "$gt": maxiSelector/1 
+        "$gt": maxiSelector/1, 
         "$lt": miniSelector/1
     }   
  });
