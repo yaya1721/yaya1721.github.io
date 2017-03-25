@@ -376,6 +376,7 @@ function editModal(){
  
  //$(this).data("id"); id為亂碼
     editDataId = $(this).data("id");
+    var name = $(this).closest("tr")[0].firstChild.innerText;
        var query={
         _id: editDataId
     } 
