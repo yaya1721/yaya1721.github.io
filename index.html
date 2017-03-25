@@ -263,7 +263,7 @@
   var cookiesCollection = db.collection("cookies");
   cookiesCollection.load();
   var editDataId; //全域變數
-  var editDataName
+  
    
   function showitem(){
   $("tbody").text(""); //清空tbody
@@ -371,11 +371,11 @@ $("tbody").on("click",".deleteButton", deleteTable);
 
 function editModal(){
   $("#myModal3").modal();
-  editDataName= $(this).closest("tr")[0].firstChild.innerText;
+ 
  //$(this).data("id"); id為亂碼
   editDataId = $(this).data("id"); 
   var query={
-     name: editDataName
+    _id: editDataId
     };
      $("#nameEdit").val(cookiesCollection.find(query)[0].name);   
      $("#priceEdit").val(cookiesCollection.find(query)[0].price100g);   
