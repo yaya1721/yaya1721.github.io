@@ -411,7 +411,7 @@ function editTable(){
 function searchPrice(){
    
 var priceExpand= $("input#priceSearch").val() 
-var result[]= cookiesCollection.find({
+var result= cookiesCollection.find({
     price: {
         "$gt": priceExpand/1
     }
