@@ -262,7 +262,7 @@
   var db= fdb.db("cookies");
   var cookiesCollection = db.collection("cookies");
   cookiesCollection.load();
-  var editDataId; //全域變數
+  
   
    
   function showitem(){
@@ -368,6 +368,8 @@ showitem();
 } 
 }
 $("tbody").on("click",".deleteButton", deleteTable);
+ 
+var editDataId; //全域變數
 
 function editModal(){
   $("#myModal3").modal();
