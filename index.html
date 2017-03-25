@@ -373,9 +373,10 @@ function editModal(){
   $("#myModal3").modal();
  
  //$(this).data("id"); id為亂碼
-  editDataId = $(this).data("id"); 
+  editDataId = $(this).data("_id");   
+  var editDataName= $(this).closest("tr")[0].firstChild.innerText;
   var query={
-    _id: editDataId
+    name: editDataName
     };
      $("#nameEdit").val(cookiesCollection.find(query)[0].name);   
      $("#priceEdit").val(cookiesCollection.find(query)[0].price100g);   
