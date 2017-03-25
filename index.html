@@ -412,7 +412,7 @@ function searchPrice(){
    
 var priceExpand= $("input#priceSearch").val() 
 var result= cookiesCollection.find({
-    price: {
+    price100g: {
         "$gt": priceExpand/1
     }
 });
