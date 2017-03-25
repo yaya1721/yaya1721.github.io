@@ -64,7 +64,7 @@
 <input id="search" placeholder="Search for...">
 <input type="button" class="btn btn-info btn-md" id="searchModal" value="搜尋"> 
  <input id="priceSearch" placeholder="price here...">
- <input type="button" class="btn btn-info btn-md" id="searchModal" value="s">
+ <input type="button" class="btn btn-info btn-md" id="searchModal2" >
  
 <button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>     
 <table class="table table-hover" id=cookiesTable >
@@ -294,7 +294,7 @@
 
  
   
-  function search(){
+ function search(){
    var query={
     name: $("input#search").val()
    };
@@ -406,6 +406,23 @@ function editTable(){
 
 }
   $("tbody").on("click","button#saveChanges", editTable);
+  
+  
+function searchPrice(){
+   
+var priceExpand= $("input#priceSearch").val() 
+ cookiescollection.find({
+    price: {
+        "$gt": priceExpand
+    }
+});
+   if($("input#priceSearch").val()!==""){
+   $("#myModal2").modal();
+   result = db.collection("cookies").find[0].name;
+   $("#test").text(result);   
+   }
+  }
+ $("#searchModal2").on("click",search);
   
   </script>
         
