@@ -430,8 +430,9 @@ var result= cookiesCollection.find({
     }   
  });
    }
-   $("#myModal2").modal();
-  $("#test").text("");
+   
+  $("#test").text("1");
+ $("#myModal2").modal();
    for(var i=0;i<result.length; i++){
    $("#test").append("餅乾名："+result[i].name+"<br>");     
    }
