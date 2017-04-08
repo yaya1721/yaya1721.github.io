@@ -276,7 +276,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><input type=\"checkbox\" class='checkbox' data-id='"+cookiesCollection.find()[i]._id+"'><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
+   var cookiesdata ="<tr><td><input type=\"checkbox\" class='checkbox' value='"+cookiesCollection.find()[i]._id+"'><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
        "&nbsp;&nbsp;<button class='editButton' data-id='"+cookiesCollection.find()[i]._id+"'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
   $("tbody").append(cookiesdata);
   }
@@ -448,7 +448,7 @@ var result= cookiesCollection.find({
    var target= $(".checkbox:checked");
    for(var i=0; i<target.length; i++){
     console.log(target[i]);
-    checkList.push(target.data-id);
+    checkList.push(target.value);
    }
    var result = cookiesCollection.find({
      _id: {
