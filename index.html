@@ -68,6 +68,9 @@
  <input id="priceSearchMini" type="number" placeholder="價格上限...">
  <input type="button" class="btn btn-info btn-md" id="searchModal2" value="搜尋">
  
+ 
+ <input id="checked" placeholder="以">
+ 
 <button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>     
 <table class="table table-hover" id=cookiesTable >
         <thead>
@@ -273,7 +276,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
+   var cookiesdata ="<tr><td><input type=\"checkbox\" class='checkbox' data-id='"+cookiesCollection.find()[i]._id+"'><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
        "&nbsp;&nbsp;<button class='editButton' data-id='"+cookiesCollection.find()[i]._id+"'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
   $("tbody").append(cookiesdata);
   }
@@ -438,6 +441,23 @@ var result= cookiesCollection.find({
    }
 }
  $("#searchModal2").on("click",searchPrice);
+  
+ 
+  function searchChecked(){
+   var target= $(".checkbox:checked").data("id");
+   var checkList=[] 
+   for(var i=0; i<target.length;i++){
+    checkList.push([i].value);
+   }
+   
+   
+   var result = cookiescollection.find({
+     _id: {
+       $in: checkList
+      }
+   });
+  
+  }
   
   </script>
         
