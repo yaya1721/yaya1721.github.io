@@ -209,7 +209,7 @@
  
  
  <!-- Modal3 -->
-<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -274,7 +274,7 @@
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
    var cookiesdata ="<tr><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
-       "&nbsp;&nbsp;<button class='editButton'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
+       "&nbsp;&nbsp;<button class='editButton' data-id='"+cookiesCollection.find()[i]._id+"'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
   $("tbody").append(cookiesdata);
   }
   }
@@ -380,7 +380,7 @@ function editModal(){
  
  //$(this).data("id"); id為亂碼
     editDataId = $(this).data("id");
-    var name = $(this).closest("tr")[0].firstChild.innerText;
+   
        var query={
         _id: editDataId
     } 
