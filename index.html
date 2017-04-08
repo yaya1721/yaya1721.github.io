@@ -416,11 +416,13 @@ var miniSelector= $("input#priceSearchMini").val();
 var maxSelector= $("input#priceSearchMax").val(); 
 
 if($("input#priceSearchMini").val()==""){
+ $("#myModal2").modal();
 var result= cookiesCollection.find({
     price100g: {
         "$gt": maxSelector/1   
     }
 })} else{
+  $("#myModal2").modal();
    var result= cookiesCollection.find({
     price100g: {
         "$gt": maxSelector/1, 
@@ -428,7 +430,7 @@ var result= cookiesCollection.find({
     }   
  });
    }
-  $("#myModal2").modal();
+  
   $("test").text("");
    for(var i=0;i<result.length; i++){
    $("#test").append("餅乾名："+result[i].name+"<br>");     
