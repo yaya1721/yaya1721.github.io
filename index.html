@@ -449,7 +449,7 @@ var result= cookiesCollection.find({
    var target= $(".checkbox:checked");
    for(var i=0; i<target.length; i++){
     console.log(target[i]);
-    checkList.push(target.value);
+    checkList.push(target[i].value);
    }
    var result = cookiesCollection.find({
      _id: {
@@ -460,10 +460,8 @@ var result= cookiesCollection.find({
    if(result!=""){ 
     $("#myModal2").modal();
    for(var i=0; i<result.length;i++){
-    $("#test").append("餅乾名："+result[i].name+"<br>");     
+    $("#test").append("餅乾名："+result[i].name+" "+result[i].price100g+"<br>");     
    }
-    console.log(checkList);
-    console.log(result);
    }
    
   
