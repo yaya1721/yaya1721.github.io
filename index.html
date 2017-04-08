@@ -448,7 +448,7 @@ var result= cookiesCollection.find({
    var target= $(".checkbox:checked");
    for(var i=0; i<target.length; i++){
     console.log(target[i]);
-    checkList.push(target[i].data("id"));
+    checkList.push(target.data-id);
    }
    var result = cookiesCollection.find({
      _id: {
