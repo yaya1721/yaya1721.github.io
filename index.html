@@ -64,18 +64,19 @@
 <input id="search" placeholder="Search for...">
 <input type="button" class="btn btn-info btn-md" id="searchModal" value="搜尋"><br> 
  
+ 
  <input id="priceSearchMax" type="number" placeholder="價格下限..."> &nbsp;&nbsp; 
  <input id="priceSearchMini" type="number" placeholder="價格上限...">
  <input type="button" class="btn btn-info btn-md" id="searchModal2" value="搜尋">
  <div class="btn-group">
- <button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>   
+ <button class="btn btn-primary btn-md" id="menu" data-toggle="collapse" data-target="#cookiesTable" onclick="showitem()">好吃的</button>   
   <button class="btn btn-warning btn-md"  onclick="searchChecked()">已勾選</button>  
  </div> 
 
-<table class="table table-hover" id=cookiesTable >
+<table class="table table-hover" id=cookiesTable class="collapse" >
         <thead>
             <tr>
-                <td>餅乾🍪</td> <td>價格/100g</td>
+                <td></td>  <td>餅乾🍪</td> <td>價格/100g</td>
             </tr>
         </thead>
         <tbody>
@@ -276,7 +277,7 @@
   $("tbody").text(""); //清空tbody
   $("cookiesTable").show();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
-   var cookiesdata ="<tr><td><input type=\"checkbox\" class='checkbox' value='"+cookiesCollection.find()[i]._id+"'></td><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
+   var cookiesdata ="<tr><td><input type=\"radio\" class='checkbox' value='"+cookiesCollection.find()[i]._id+"'></td><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+
        "&nbsp;&nbsp;<button class='editButton' data-id='"+cookiesCollection.find()[i]._id+"'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
   $("tbody").append(cookiesdata);
   }
