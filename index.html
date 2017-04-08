@@ -67,11 +67,11 @@
  <input id="priceSearchMax" type="number" placeholder="價格下限..."> &nbsp;&nbsp; 
  <input id="priceSearchMini" type="number" placeholder="價格上限...">
  <input type="button" class="btn btn-info btn-md" id="searchModal2" value="搜尋">
- 
- 
- <input id="checked" placeholder="以">
- 
-<button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>     
+ <div class="btn-group">
+ <button class="btn btn-primary btn-md" id="menu" onclick="showitem()">好吃的</button>   
+  <button class="btn btn-warning btn-md"  onclick="searchChecked()">已勾選</button>  
+ </div> 
+
 <table class="table table-hover" id=cookiesTable >
         <thead>
             <tr>
@@ -444,19 +444,19 @@ var result= cookiesCollection.find({
   
  
   function searchChecked(){
-   var target= $(".checkbox:checked");
-   console.log(target);
-   var checkList=[] 
-   for(var i=0; i<target.length;i++){
-    checkList.push(target[i].data("id"));
-   }
-   
-   
+   var checkList= $(".checkbox:checked").data("id");
    var result = cookiescollection.find({
      _id: {
        $in: checkList
       }
    });
+   $("p#test").text("");
+   if(result!=""){ 
+    $("#myModal2").modal();
+   for(var i=0; i<result.length;i++){
+    $("#test").append("餅乾名："+result[i].name+"<br>");     
+   }
+   }
   
   }
   
