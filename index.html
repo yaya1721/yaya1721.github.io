@@ -445,6 +445,7 @@ var result= cookiesCollection.find({
  
   function searchChecked(){
    var checkList= []
+  
    var target= $(".checkbox:checked");
    for(var i=0; i<target.length; i++){
     console.log(target[i]);
@@ -461,7 +462,10 @@ var result= cookiesCollection.find({
    for(var i=0; i<result.length;i++){
     $("#test").append("餅乾名："+result[i].name+"<br>");     
    }
+    console.log(checkList);
+    console.log(result);
    }
+   
   
   }
   
