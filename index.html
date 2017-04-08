@@ -429,8 +429,9 @@ var result= cookiesCollection.find({
  });
    }
   $("#myModal2").modal();
+  $('#test').val()=="";
    for(var i=0;i<result.length; i++){
-   $("#test").append("餅乾名："+result[i].name);     
+   $("#test").append("餅乾名："+result[i].name &nbsp;&nbsp;);     
    }
 }
  $("#searchModal2").on("click",searchPrice);
