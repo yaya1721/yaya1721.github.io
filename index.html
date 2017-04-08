@@ -392,8 +392,8 @@ $("tbody").on("click",".editButton", editModal);
 function editTable(){
   var r = confirm("Are you sure?");
  if (r == true){
-  var nameValue = $("#nameIpt").val();
-  var priceValue = $("#priceIpt").val();
+  var nameValue = $("#nameEdit").val();
+  var priceValue = $("#priceEdit").val();
   if (nameValue!==""&& priceValue!==""){
    
    var newData={
