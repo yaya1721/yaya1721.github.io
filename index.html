@@ -69,6 +69,8 @@
  <input id="priceSearchMax" type="number" placeholder="價格下限..."> &nbsp;&nbsp; 
  <input id="priceSearchMini" type="number" placeholder="價格上限...">
  <input type="button" class="btn btn-info btn-md" id="searchModal2" value="搜尋">
+ 
+ 
  <div class="btn-group">
  <button class="btn btn-primary btn-md" id="menu" data-target="#cookiesTable" onclick="showitem()">好吃的</button>   
   <button class="btn btn-warning btn-md"  onclick="searchChecked()">已勾選</button>  
@@ -106,8 +108,21 @@
     </div><!-- /input-group -->
   </div><!-- /.col-lg-6 -->
 </div><!-- /.row -->
+   
       
+  <div class="input-group">
+  <input type="text" class="form-control" id="drinksCategoryIpt" aria-label="...">
+  <div class="input-group-btn">
+    <!-- Button and dropdown menu -->
+    <button class="btn btn-default" type="button" id="addDrinksBtn" onclick="addDrinks()">新增飲料</button>
+  </div>
+</div>   
       
+    <select id="beverage-id">
+            <option value="">請選擇搭配飲料</option>
+            
+            </select>
+    
       
       
       
@@ -274,6 +289,9 @@
   var cookiesCollection = db.collection("cookies");
   cookiesCollection.load();
   
+  var beverageCollection = db.collection("beverage");
+  beverageCollection.load();
+  
   
    
   function showitem(){
@@ -343,6 +361,7 @@ function addTable(){
     var newcookies={
     name:  $("#nameIpt").val(),
     price100g: $("#priceIpt").val()
+    categoryid: $("select#") 
 };
    cookiesCollection.insert(newcookies);
    cookiesCollection.save();
@@ -467,10 +486,24 @@ var result= cookiesCollection.find({
     $("#test").append(result[i].name+"~  $"+result[i].price100g+"<br>");     
    }
    }
-   
-  
   }
   
+  
+  
+  function addDrinks(){
+  var newBeverage= {
+    name: $("#drinksCategoryIpt").val()
+};
+beverageCollection.insert(newBeverage);
+beverageCollection.save();
+   showitem();
+  
+  }  
+  
+  function addSelector(){
+  var beveragedata = ""
+  $("#beverage-id").append(cookiesdata);
+  }
   </script>
         
  
