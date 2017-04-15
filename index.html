@@ -362,7 +362,7 @@ function addTable(){
     var newcookies={
     name:  $("#nameIpt").val(),
     price100g: $("#priceIpt").val(),
-    beverage: $("select#beverage-id:selected").val()
+    beverage: $("select#beverage-id :selected").val()
 };
    cookiesCollection.insert(newcookies);
    cookiesCollection.save();
