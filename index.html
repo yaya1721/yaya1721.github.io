@@ -496,13 +496,15 @@ var result= cookiesCollection.find({
 };
 beverageCollection.insert(newBeverage);
 beverageCollection.save();
-   showitem();
-  
+   addSelector();
+ 
   }  
   
   function addSelector(){
-  var beveragedata = ""
-  $("#beverage-id").append(cookiesdata);
+  for(var i=0; i<beverageCollection.find().length; i++){ 
+   var beveragedata = "<option value='"+beverageCollection.find()[i]._id+"'>"+beverageCollection.find()[i].name+"</option>"
+  $("#beverage-id").append(beveragedata);
+  }
   }
   </script>
         
