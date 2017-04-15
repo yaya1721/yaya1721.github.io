@@ -122,7 +122,7 @@
     <option value="">請選擇搭配飲料</option>
             
    </select>
-   <button class="btn btn-warning" type="button" id="tableEnter">enter</button>
+   <button class="btn btn-danger" type="button" id="tableEnter">enter</button>
   </div><!-- /.col-lg-6 -->     
  </div><!-- /.row -->    
       
@@ -299,9 +299,12 @@
   $("cookiesTable").collapse();
   for(var i=0;i<cookiesCollection.find().length; i++){ 
    var cookiesdata =
-     "<tr><td><input type=\"radio\" class='checkbox' value='"+cookiesCollection.find()[i]._id+"'></td><td><button id='challenge'>"+cookiesCollection.find()[i].name+"></button></td><td"+cookiesCollection.find()[i].price100g+"</td><td>"+cookiesCollection.find()[i].beverage+"</td><td>"+
+     "<tr><td><input type=\"radio\" class='checkbox' value='"+cookiesCollection.find()[i]._id+"'></td><td><button id='challenge'>"+cookiesCollection.find()[i].name+"></button></td><td>"+cookiesCollection.find()[i].price100g+"</td><td>"+cookiesCollection.find()[i].beverage+"</td><td>"+
      "&nbsp;&nbsp;<button class='editButton' data-id='"+cookiesCollection.find()[i]._id+"'>編輯</button>&nbsp;&nbsp;<button class='deleteButton'>刪除</button></td>"
   $("tbody").append(cookiesdata);
+   
+   
+   
   }
   }
   
@@ -508,7 +511,9 @@ beverageCollection.save();
   }
   }
   </script>
-        
+  <script>
+   addSelector();
+   </script>
  
 </body>
 </html>
