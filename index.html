@@ -314,9 +314,7 @@
         };
         if(bequery._id!=undefined){
           beverageName = beverageCollection.find(bequery)[0].name
-         console.log(beverageName);
-        }
-        else{
+        }else{
           beverageName = "尚未選擇"
         } 
   }
@@ -338,7 +336,6 @@
      name: name
     };
      $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));
-     console.log(cookiesCollection.find(query)[0]);
   }
 
  
@@ -412,7 +409,7 @@ function deleteTable(){
  var id = $(this).data("id");
 if (r == true){
  cookiesCollection.remove({
-    name: id
+    _id: id
 });
 cookiesCollection.save();
 showitem(); 
