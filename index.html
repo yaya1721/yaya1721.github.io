@@ -385,14 +385,12 @@ function addTable(){
     name:  $("#nameIpt").val(),
     price100g: $("#priceIpt").val(),
     beverage: $("select#beverage-id :selected").val()
+    }
    cookiesCollection.insert(newcookies);
    cookiesCollection.save();
    showitem();
     $("#nameIpt").val("");
-    $("#priceIpt").val("");
-  
-   
-   
+    $("#priceIpt").val("");  
   }else{
     alert("You must write something!");
   }
