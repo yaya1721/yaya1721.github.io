@@ -310,7 +310,7 @@
    var beverageName=""
    for(var i=0;i<beverageCollection.find().length;i++){
     var bequery={
-          _id: beverageCollection.find()[i].name
+          _id: beverageCollection.find()[i]._id
         };
         if(bequery._id!=undefined){
           beverageName = beverageCollection.find(bequery)[0].name
