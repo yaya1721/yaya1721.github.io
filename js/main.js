@@ -75,7 +75,7 @@ var main = {
           // 2fc73a3a967e97599c9763d05e564189
 	  // set an initial image
 	  //var imgInfo = main.getImgInfo();
-	  var src = "/bigimgs/04.jpg";
+	  var src = "/bigimgs/04.png";
 	  var desc = "cover";
   	main.setImg(src, desc);
     
