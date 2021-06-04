@@ -74,11 +74,11 @@ var main = {
 
           // 2fc73a3a967e97599c9763d05e564189
 	  // set an initial image
-	  var imgInfo = main.getImgInfo();
-	  var src = imgInfo.src;
-	  var desc = imgInfo.desc;
-  	  main.setImg(src, desc);
-      console.log(src, desc);
+	  //var imgInfo = main.getImgInfo();
+	  var src = "/bigimgs/01.jpg";
+	  var desc =  "beautiful island";
+  	main.setImg(src, desc);
+    
   	
 	  // For better UX, prefetch the next image so that it will already be loaded when we want to show it
   	  var getNextImg = function() {
@@ -117,7 +117,7 @@ var main = {
   getImgInfo : function() {
   	var randNum = Math.floor((Math.random() * main.numImgs) + 1);
     var src = main.bigImgEl.attr("data-img-src-" + randNum);
-	var desc = main.bigImgEl.attr("data-img-desc-" + randNum);
+	  var desc = main.bigImgEl.attr("data-img-desc-" + randNum);
 	
 	return {
 	  src : src,
