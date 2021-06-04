@@ -78,12 +78,14 @@ var main = {
 	  var src = imgInfo.src;
 	  var desc = imgInfo.desc;
   	  main.setImg(src, desc);
+      console.log(src, desc);
   	
 	  // For better UX, prefetch the next image so that it will already be loaded when we want to show it
   	  var getNextImg = function() {
 	    var imgInfo = main.getImgInfo();
 	    var src = imgInfo.src;
-	    var desc = imgInfo.desc;		  
+	    var desc = imgInfo.desc;
+
 	    
 		var prefetchImg = new Image();
   		prefetchImg.src = src;
@@ -102,7 +104,7 @@ var main = {
   			getNextImg();
 		  }, 1000); 
   		  //});		
-  		}, 6000);
+  		}, 5000);
   	  };
 	  
 	  // If there are multiple images, cycle through them
