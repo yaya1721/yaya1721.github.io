@@ -75,8 +75,8 @@ var main = {
           // 2fc73a3a967e97599c9763d05e564189
 	  // set an initial image
 	  //var imgInfo = main.getImgInfo();
-	  var src = "/bigimgs/01.jpg";
-	  var desc =  "beautiful island";
+	  var src = "/bigimgs/04.jpg";
+	  var desc = "cover";
   	main.setImg(src, desc);
     
   	
@@ -104,7 +104,7 @@ var main = {
   			getNextImg();
 		  }, 1000); 
   		  //});		
-  		}, 5000);
+  		}, 6000);
   	  };
 	  
 	  // If there are multiple images, cycle through them
