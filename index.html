@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sonya's Blog</title>
+ 
+ <script src="js/jquery-3.1.1.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+ <script src="js/main.js"></script>
+ <script src="js/fdb-all.min.js"></script>
+ 
+ <link rel="stylesheet" href="css/bootstrap.css">
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="shortcut icon" href="https://pbs.twimg.com/profile_images/631800387016626176/P5jbtPH5.png" type="image/x-icon" />
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ </head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+     </button>
+   </div>
+    <!-- Trigger the modal with a button -->
+   <!--a class="navbar-brand" href="#"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Matcha Diary</button></a-->
+
+   
+   <div id="myNavbar"> 
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Sonya Hsieh</a></li>
+      <li><a href="#">Blog</a></li>
+    </ul>
+    <!--button class="btn btn-info navbar-btn">Photos</button-->
+    <ul class="nav navbar-nav navbar-right">
+    <li><a href ="https://www.linkedin.com/in/yatunghsieh/" >Linkedin</a></li>
+    <li><a href ="https://www.facebook.com/sonya.hsieh.98"target="_blank" >Facebook</a></li>
+     
+    <!--下拉式選單 -->
+    <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+     <ul class="dropdown-menu">
+        <li><a href="#">Comment</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Resume</a></li>
+     </ul>
+    </li>
+  </ul>    
+   </div> 
+ </div>
+</nav>
+ <div  style= 'text-align: center;background-color:#556B2F; padding:15px 0px'>
+ <span id='webName' style='font-size:32px; color:white;  '>Ya Tung (Sonya) Hsieh's personal webpage</span>
+ </div>
+  <div class="story">
+   <div class="container"> <!-- container 在最外層 -->
+    <div class="row">     <!-- row 在中間 --> 
+     <div class="col-md-4"> <img src="/images/BPCS.jpg" width=250 id="myPhoto"></div>
+     <div class="col-md-6 ">
+      <p id="preface"> Welcome to my page!</p>
+      <p>NYUAD sophomore</p>
+      <p>Major in Computer Science with concentration in Applied Mathematics and Cognitive Neuroscience</p>
+      <p>A versatile coding lover</p>
+      <a href ="https://yaya1721.github.io/JS-final-project-template-ByNiya/"target="_blank" >My first game project written in JavaScript + CSS + html</a><i class="material-icons">videogame_asset</i>
+<!--div>
+<input id="search" placeholder="Search for...">
+<input type="button" class="btn btn-info btn-md" id="searchModal" value="搜尋"><br> 
+ 
+ 
+ <input id="priceSearchMax" type="number" placeholder="價格下限..."> &nbsp;&nbsp; 
+ <input id="priceSearchMini" type="number" placeholder="價格上限...">
+ <input type="button" class="btn btn-info btn-md" id="searchModal2" value="搜尋">
+ 
+ 
+ <div class="btn-group">
+ <button class="btn btn-primary btn-md" id="menu" data-target="#cookiesTable" onclick="showitem()">好吃的</button>   
+  <button class="btn btn-warning btn-md"  onclick="searchChecked()">已勾選</button>  
+ </div--> 
+
+<!--table class="table table-hover" id=cookiesTable >
+        <thead>
+            <tr>
+                <td></td>  <td>餅乾🍪  </td> <td>價格/100g </td> <td>搭配飲料🍵</td> <td>   </td> <td>  </td>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table-->
+</div>
+      
+      
+    
+   <!--p>新增餅乾!!!!!</p-->   
+<div class="row">
+  <div class="col-lg-9">
+    <!--div class="input-group">
+      <input type="text" class="form-control" id="nameIpt" placeholder="name...">
+      <span class="input-group-btn">
+      </span>
+    </div--><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+  <br>
+   <div class="col-lg-9">
+    <!--div class="input-group">
+      <input type="text" class="form-control" id="priceIpt" placeholder="price/100g...">
+       <span class="input-group-btn">
+       </span>
+    </div--><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+
+  
+  <div class="col-lg-6">   
+   <div class="input-group">
+    <!--input type="text" class="form-control" id="drinksCategoryIpt"  placeholder="drinks here..."-->
+     <div class="input-group-btn">
+      <!-- Button and dropdown menu -->
+      <!--button class="btn btn-default" type="button" id="addDrinksBtn" onclick="addDrinks()">新增飲料到選單</button-->
+     </div>
+   </div>   
+  </div><!-- /.col-lg-6 --> 
+  <div class="col-lg-6">   
+   <!--select id="beverage-id">
+    <option value="">請選擇搭配飲料</option>
+            
+   </select-->
+   <!--button class="btn btn-danger" type="button" id="tableEnter">enter</button-->
+  </div><!-- /.col-lg-6 --> 
+
+ </div><!-- /.row -->    
+      
+      
+   
+      <!--p>Your opinion</p-->
+      <!--div class="input-group">
+        <input type="text" class="form-control" id="ipt" placeholder="Your opinion here...">
+       <span class="input-group-btn">
+        <button class="btn btn-success" type="button" id="tableEnter">enter</button>
+         </span>
+       <ul id=info>
+   
+       </ul>
+    </div-->
+
+
+      
+      
+      </div> 
+  </div>
+</div>
+ </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">抹茶舒芙蕾</h4>
+      </div>
+      <div class="modal-body">
+      
+       <!--div class="row">
+          <div class="col-md-3">
+           <p>材料：</p>
+           <p>牛奶…100g</p>
+           <p>鮮奶油…65g</p>
+           <p>蛋黃…2個</p>
+           <p>砂糖(蛋黃)…15g</p>
+           <p>低筋麵粉…16g</p>
+           <p>一大匙不含糖的抹茶(5g)</p>
+           <p>蛋白…2個</p>
+           <p>砂糖(蛋白)…20g</p>
+           <p>無鹽奶油…適量</p>
+           <p>砂糖…適量</p>
+           <p>烤盅9*5CM   2個</p>
+       </div-->
+       <!--div class="col-md-9">
+           <p>作法</p>
+           <p>1.烤盅裡全部抹上薄薄一層無鹽奶油，放砂糖下去轉動，讓各個面積沾上砂糖，多餘的糖倒回糖罐裡。</p>
+           <p>2.烤箱開始用200℃預熱。蛋黃和蛋白分開放(事先放室溫退冰)。蛋黃和砂糖放一起，攪拌到蓬鬆為止。</p>
+           <p>3.牛奶和鮮奶油一起放到小湯鍋裡，小火加到溫熱就好(不用沸騰)，蛋黃糊加入過篩麵粉攪拌，把溫熱的牛奶倒進蛋黃糊。</p>
+           <p>4.將步驟3的麵糊倒回小湯鍋裡，小火煮到濃綢，剛開始會一塊一塊的，繼續煮會變光滑，舉起打蛋器會呈水滴落下就可關火。</p>
+           <p>5.倒回原來蛋黃調理盆，加入抹茶粉攪拌均勻。</p>
+           <p>6.將蛋白打發，過程中砂糖分2次加進去，直到舉起打蛋器蛋白霜掉不下來，先放一部份在綠茶蛋黃霜裡先攪拌均勻，最後蛋白霜、蛋黃糊全部一次混勻。</p>
+           <p>7.倒入烤盅裡，稍微敲敲桌面(防大氣泡)，烤盅杯緣用手刮一圈，放置烤箱用200℃烤12~15分鐘。</p>
+       </div-->
+      </div>
+         
+      
+      
+   </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+ 
+ 
+ 
+
+<!-- Modal2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">id的詳細資料~</h4>
+      </div>
+      <div class="modal-body">
+        <p id="test"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ <!-- Modal3 -->
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">編輯</h4>
+      </div>
+      <div class="modal-body">
+       
+     
+       
+       <div class="row">
+  <div class="col-lg-12">
+     <p>name</p>
+   <div class="input-group">
+     <input type="text" class="form-control" id="nameEdit">
+      <span class="input-group-btn">
+      </span>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-9 -->
+  <br>
+    <div class="col-lg-12">
+     <p>price/100g</p>
+     <div class="input-group">
+      <input type="text" class="form-control" id="priceEdit">
+
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-9 -->
+<!--[if !IE]>
+<br>
+   <div class="col-lg-12">
+    <p>搭配飲料</p>
+     <input type="text" class="form-control" id="beverageEdit">
+     <select id="inModal">
+    <option value="">請選擇搭配飲料</option>
+            
+   </select>
+  </div>
+<![endif]-->
+</div><!-- /.row -->
+            
+       
+       
+       
+       
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges" onclick='editTable()'>Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!--script>
+  var fdb= new ForerunnerDB();
+  var db= fdb.db("cookies");
+  var cookiesCollection = db.collection("cookies");
+  cookiesCollection.load();
+  
+  var beverageCollection = db.collection("beverage");
+  beverageCollection.load();
+  
+  
+  function showitem(){
+  $("tbody").text(""); //清空tbody
+  $("cookiesTable").show();
+   var beverageName=""
+   for(var i=0;i<beverageCollection.find().length;i++){
+    var bequery={
+          _id: beverageCollection.find()[i]._id
+        };
+        if(bequery._id!=undefined){
+          beverageName = beverageCollection.find(bequery)[0].name
+        }else{
+          beverageName = "尚未選擇"
+        } 
+  }
+  for(var i=0;i<cookiesCollection.find().length; i++){ 
+   var cookiesdata =
+     "<tr><td><input type=\"radio\" class='checkbox' value='"+cookiesCollection.find()[i]._id+"'></td><td><button id='challenge'>"+cookiesCollection.find()[i].name+"</button></td><td>"+cookiesCollection.find()[i].price100g+"</td><td>"+beverageName+"</td><td>"+
+     "&nbsp;&nbsp;<button class='editButton' data-id='"+cookiesCollection.find()[i]._id+"'>編輯</button></td>&nbsp;&nbsp;<td><button class='deleteButton' data-id='"+cookiesCollection.find()[i]._id+"'>刪除</button></td></tr>"
+  $("tbody").append(cookiesdata);
+  }
+  }
+  
+  
+  
+
+  function challengeModal(){
+        $("#myModal2").modal();
+    var name=$(this).text();
+    var query={
+     name: name
+    };
+     $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));
+  }
+
+ 
+  $("table").on("click","button#challenge",challengeModal);
+
+ 
+  
+ function search(){
+   var query={
+    name: $("input#search").val()
+   };
+   if($("input#search").val()!==""){
+   $("#myModal2").modal();
+   result = db.collection("cookies").find(query);
+   $("#test").text(JSON.stringify(cookiesCollection.find(query)[0]));   
+   }
+  }
+ $("#searchModal").on("click",search);
+  
+  function addTask(){
+  var value = $("#ipt").val();
+  
+  if (value!==""){
+     $("#info").append("<span>"+"Hello "+value+"</span><br>")
+    $("#ipt").val("");
+  }
+}
+$("button#in").on("click", addTask);
+
+
+function isEnterPressed(event){
+  //alert(event.which);
+  if(event.which==13){
+   addTask();  
+  }
+}
+$("#ipt").on("keypress", isEnterPressed);
+
+
+
+function addTable(){
+  var nameValue = $("#nameIpt").val();
+  var priceValue = $("#priceIpt").val();
+  if (nameValue!==""&& priceValue!==""){
+    var newcookies={
+    name:  $("#nameIpt").val(),
+    price100g: $("#priceIpt").val(),
+    beverage: $("select#beverage-id :selected").val()
+    }
+   cookiesCollection.insert(newcookies);
+   cookiesCollection.save();
+   showitem();
+    $("#nameIpt").val("");
+    $("#priceIpt").val("");  
+  }else{
+    alert("You must write something!");
+  }
+}
+$("button#tableEnter").on("click", addTable);
+
+  function isEnterPressed2(event){
+  //alert(event.which);
+  if(event.which==13){
+   addTable();  
+  }
+}
+$(".form-control").on("keypress", isEnterPressed2);
+
+function deleteTable(){
+ var r = confirm("Are you sure?");
+ var id = $(this).data("id");
+if (r == true){
+ cookiesCollection.remove({
+    _id: id
+});
+cookiesCollection.save();
+showitem(); 
+} 
+}
+$("tbody").on("click",".deleteButton", deleteTable);
+ 
+var editDataId; //全域變數
+
+function editModal(){
+  $("#myModal3").modal();
+ 
+ //$(this).data("id"); id為亂碼
+    editDataId = $(this).data("id");
+   
+       var query={
+        _id: editDataId
+    } 
+     $("#nameEdit").val(cookiesCollection.find(query)[0].name);   
+     $("#priceEdit").val(cookiesCollection.find(query)[0].price100g);
+     //$("#beverageEdit").val(cookiesCollection.find(query)[0].beverage);
+  }
+$("tbody").on("click",".editButton", editModal);
+  
+function editTable(){
+  var r = confirm("Are you sure?");
+ if (r == true){
+  var nameValue = $("#nameEdit").val();
+  var priceValue = $("#priceEdit").val();
+ 
+  if (nameValue!==""&& priceValue!==""){
+   
+   var newData={
+    name:  $("#nameEdit").val(),
+    price100g: $("#priceEdit").val(),
+    
+};  
+  db.collection("cookies").updateById(editDataId,newData); //只能透過id亂碼
+  cookiesCollection.save();
+  showitem();
+  }
+  }
+
+}
+  $("tbody").on("click","button#saveChanges", editTable);
+  
+  
+function searchPrice(){
+   
+var miniSelector= $("input#priceSearchMini").val(); 
+var maxSelector= $("input#priceSearchMax").val(); 
+
+if($("input#priceSearchMini").val()==""){
+
+var result= cookiesCollection.find({
+    price100g: {
+        "$gt": maxSelector/1   
+    }
+})} else{
+  
+   var result= cookiesCollection.find({
+    price100g: {
+        "$gt": maxSelector/1, 
+        "$lt": miniSelector/1
+    }   
+ });
+   }
+   
+  $("p#test").text("");
+ $("#myModal2").modal();
+   for(var i=0;i<result.length; i++){
+   $("#test").append("餅乾名："+result[i].name+"<br>");     
+   }
+}
+ $("#searchModal2").on("click",searchPrice);
+  
+ 
+  function searchChecked(){
+   var checkList= []
+  
+   var target= $(".checkbox:checked");
+   for(var i=0; i<target.length; i++){
+    console.log(target[i]);
+    checkList.push(target[i].value);
+   }
+   var result = cookiesCollection.find({
+     _id: {
+       $in: checkList
+      }
+   });
+   $("p#test").text("");
+   if(result!=""){ 
+    $("#myModal2").modal();
+   for(var i=0; i<result.length;i++){
+    $("#test").append(result[i].name+"~  $"+result[i].price100g+"<br>");     
+   }
+   }
+  }
+  
+  
+  
+  function addDrinks(){
+  var newBeverage= {
+    name: $("#drinksCategoryIpt").val()
+};
+beverageCollection.insert(newBeverage);
+beverageCollection.save();
+   addSelector();
+ 
+  }  
+  
+  function addSelector(){
+  for(var i=0; i<beverageCollection.find().length; i++){ 
+   var beveragedata = "<option value='"+beverageCollection.find()[i]._id+"'>"+beverageCollection.find()[i].name+"</option>"
+  $("#beverage-id").append(beveragedata);
+  //$("#inModal").append(beveragedata);
+  }
+  }
+  </script-->
+ 
+
+</body>
+</html>
