@@ -2,7 +2,7 @@
 
 /* --- General --- */
 @media only screen and (min-width: 500px)
-{.container{
+{.intro-header big-img{
   height: 500px;
 }}
 
@@ -12,12 +12,6 @@ body {
   color: #404040;
   position: relative;
   background: #FFF;
-}
-
-.footer {
-  left: 0;
-  bottom: 0;
-  height: 200px;
 }
 
 p {
