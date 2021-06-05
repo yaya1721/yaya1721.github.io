@@ -1,6 +1,10 @@
 /*@import url("pygment_highlights.css");*/
 
 /* --- General --- */
+@media (min-width: 500px)
+.container {
+  height: 500px;
+}
 
 body {
   font-family: 'Lora', 'Times New Roman', serif;
